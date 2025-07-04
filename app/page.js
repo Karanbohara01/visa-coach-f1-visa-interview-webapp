@@ -587,6 +587,7 @@
 'use client'
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import LastUpdated from '@/components/LastUpdated';
 import {
   BarChart,
   BookOpen,
@@ -680,6 +681,7 @@ export default function ProfessionalVisaCoach() {
   const [currentStep, setCurrentStep] = useState(1);
   const [showAlert, setShowAlert] = useState(true);
   const [demoProgress, setDemoProgress] = useState(45);
+  const [time, setTime] = useState("");
 
   const navigationItems = [
     { label: "Features", href: "#features" },
@@ -688,6 +690,12 @@ export default function ProfessionalVisaCoach() {
     { label: "Success Stories", href: "#testimonials" },
     { label: "Support", href: "#support" }
   ];
+
+
+
+
+
+
 
   const features = [
     {
@@ -753,11 +761,18 @@ export default function ProfessionalVisaCoach() {
       description: "Continue practicing until you're confident and ready",
       time: "Ongoing"
     }
+
   ];
 
+
+
+
+
   return (
+
     <div className="min-h-screen bg-white">
       {/* System Status Alert - Heuristic 1: Visibility of System Status */}
+
       {showAlert && (
         <div className="bg-purple-50 border-b border-purple-200 p-3">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -767,9 +782,7 @@ export default function ProfessionalVisaCoach() {
                   <strong>System Status:</strong> All services operational.
                   <StatusIndicator status="online">99.9% uptime</StatusIndicator>
                 </div>
-                <div className="text-sm">
-                  Last updated: {new Date().toLocaleTimeString()}
-                </div>
+                <LastUpdated />
               </div>
             </Alert>
           </div>
