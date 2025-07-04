@@ -1,5 +1,5 @@
 
-import { BriefcaseBusinessIcon, Calendar, Code2Icon, Crown, HelpCircle, LayoutDashboard, List, Puzzle, Settings, User2Icon, WalletCards } from "lucide-react";
+import { BriefcaseBusinessIcon, Calendar, Code2Icon, Crown, HelpCircle, LayoutDashboard, List, Puzzle, Settings, User2Icon, WalletCards, FileText } from "lucide-react";
 
 export const SidebarOptions = [
     {
@@ -21,6 +21,11 @@ export const SidebarOptions = [
         name: "Billing",
         icon: WalletCards,
         path: '/billing'
+    },
+    {
+        name: "Documents",
+        icon: FileText,
+        path: '/documents'
     },
     {
         name: "Settings",
