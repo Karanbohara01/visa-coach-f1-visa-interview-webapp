@@ -3,6 +3,7 @@
 
 "use client";
 import { InterviewDataContext } from "@/context/InterviewDataContext";
+import AlertConfirmation from "./_components/AlertConfirmation";
 import { supabase } from "@/services/supabaseClient";
 import Vapi from "@vapi-ai/web";
 import axios from "axios";
@@ -156,7 +157,7 @@ function StartInterview() {
         }
     };
 
-        const generateFeedback = async () => {
+    const generateFeedback = async () => {
         console.log("generateFeedback function called");
         try {
             console.log("Conversation being sent:", conversation);
@@ -240,10 +241,11 @@ function StartInterview() {
             <div className="flex items-center justify-center mt-10 gap-4">
                 <Mic className="h-12 w-12 p-3 bg-gray-500 rounded-full cursor-pointer text-white" />
                 {!loading ? (
-                    <PhoneOff
-                        className="h-12 w-12 p-3 bg-red-700 rounded-full text-white cursor-pointer"
-                        onClick={() => stopInterview()}
-                    />
+                    <AlertConfirmation stopInterview={stopInterview}>
+                        <PhoneOff
+                            className="h-12 w-12 p-3 bg-red-700 rounded-full text-white cursor-pointer"
+                        />
+                    </AlertConfirmation>
                 ) : (
                     <Loader2Icon className="animate-spin" />
                 )}
@@ -254,3 +256,4 @@ function StartInterview() {
 }
 
 export default StartInterview;
+
