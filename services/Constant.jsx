@@ -1,5 +1,5 @@
 
-import { BriefcaseBusinessIcon, Calendar, Code2Icon, Crown, HelpCircle, LayoutDashboard, List, Puzzle, Settings, User2Icon, WalletCards, FileText } from "lucide-react";
+import { BriefcaseBusinessIcon, Calendar, BookMarked, Code2Icon, Crown, HelpCircle, LayoutDashboard, List, Puzzle, Settings, User2Icon, WalletCards, FileText } from "lucide-react";
 
 export const SidebarOptions = [
     {
@@ -18,9 +18,9 @@ export const SidebarOptions = [
         path: '/all-interview'
     },
     {
-        name: "Billing",
-        icon: WalletCards,
-        path: '/billing'
+        name: "Question Library",  // <-- New link added
+        icon: BookMarked,         // <-- Icon added
+        path: '/question-library'
     },
     {
         name: "Documents",
