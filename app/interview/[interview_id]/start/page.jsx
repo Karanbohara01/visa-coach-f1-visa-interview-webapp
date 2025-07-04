@@ -1,6 +1,4 @@
 
-
-
 "use client";
 import { InterviewDataContext } from "@/context/InterviewDataContext";
 import AlertConfirmation from "./_components/AlertConfirmation";
@@ -38,8 +36,9 @@ function StartInterview() {
     const handleSpeechStart = () => setActiveUser(false);
     const handleSpeechEnd = () => setActiveUser(true);
     const handleCallEnd = async () => {
+        setLoading(true); // 👈 **Set loading to true when the interview ends**
         console.log("Call ended event triggered.");
-        toast("Interview ended.");
+        // toast("Interview ended. Generating feedback...");
         await generateFeedback();
     };
 
