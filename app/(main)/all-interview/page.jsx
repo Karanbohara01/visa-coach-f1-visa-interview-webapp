@@ -8,6 +8,7 @@ import { Plus, Video } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { ClipLoader } from 'react-spinners';
 import InterviewCard from '../dashboard/_components/InterviewCard';
+import AssistantFloatingButton from '../dashboard/_components/AssistantFloatingButton';
 
 function AllInterview() {
     const [interviewList, setInterviewList] = useState([]);
@@ -47,6 +48,7 @@ function AllInterview() {
 
     return (
         <div className="my-5 px-4 sm:px-6 lg:px-8">
+            <AssistantFloatingButton />
             <h2 className="font-bold text-xl sm:text-2xl text-primary mb-5">All Previously Created Interviews</h2>
 
             {isLoading ? (

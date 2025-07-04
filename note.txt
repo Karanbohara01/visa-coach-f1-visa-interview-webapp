@@ -1,0 +1,36 @@
+1. Metaphor Use (especially through notification)
+A metaphor in UI/UX uses familiar concepts to help users understand new features.
+Example:
+
+A bell icon for notifications is a metaphor for a real-life bell that signals attention.
+In React, you might use a toast notification (like react-toastify) to show messages, using a metaphorical "pop-up" to alert users.
+2. Flat Design (e.g., landing page with all info and direct navigation)
+Flat design avoids 3D effects, shadows, and gradients, focusing on simplicity and usability.
+Example:
+
+A React landing page with clear sections (About, Features, Contact) all visible at once, using simple colors and icons.
+Navigation buttons or links let users jump directly to any section without extra clicks or searching.
+3. Golden Path (e.g., three tab concept of Apple)
+The "golden path" is the ideal, streamlined user journey through your app.
+Example:
+
+Apple’s three-tab interface (e.g., Music, Podcasts, Search) guides users to main features quickly.
+In React, you might use a tab component (like Material-UI Tabs) to highlight the most important workflows, reducing distractions.
+4. Crow’s Feet (product performance depends on user mood)
+This refers to how user experience can vary based on their mood or context.
+Example:
+
+If a user is frustrated, even small delays or unclear messages can make them abandon your React app.
+To address this, you might add friendly error messages, loading spinners, or helpful tooltips to keep users engaged regardless of their mood.
+Summary Table
+
+Concept	Example in React/Web Project
+Metaphor	Bell icon for notifications, toast pop-ups
+Flat Design	Simple, info-rich landing page with direct navigation
+Golden Path	Three main tabs for core features, guiding user flow
+Crow’s Feet	Friendly UI elements to support users in different moods
+Let me know if you want code examples for any of these!
+
+
+low fedility last ma rakhne hai
+final product vitra development methodology lekhne tesma individual scrum lekhne ani tes vitra => trello ko done ko screenshot rakhne

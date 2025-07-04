@@ -55,11 +55,10 @@ function CandidateFeedbackDialog({ candidate }) {
                     <span className="text-lg font-bold text-gray-800">6.8</span>
                     <span className="text-gray-500">/10</span>
                   </div>
-                  <span className={`text-xs px-2 py-1 rounded-full mt-1 ${
-                    isRecommended 
-                      ? 'text-green-600 bg-green-50' 
-                      : 'text-red-600 bg-red-50'
-                  }`}>
+                  <span className={`text-xs px-2 py-1 rounded-full mt-1 ${isRecommended
+                    ? 'text-green-600 bg-green-50'
+                    : 'text-red-600 bg-red-50'
+                    }`}>
                     {feedback?.Recommendation || "Evaluation Pending"}
                   </span>
                 </div>
@@ -74,32 +73,32 @@ function CandidateFeedbackDialog({ candidate }) {
                   </span>
                   <span className="text-sm font-normal text-gray-500">
                     Overall: {(
-                      (feedback?.rating?.technicalSkills + 
-                       feedback?.rating?.communication + 
-                       feedback?.rating?.problemSolving + 
-                       feedback?.rating?.experience) / 4
+                      (feedback?.rating?.technicalSkills +
+                        feedback?.rating?.communication +
+                        feedback?.rating?.problemSolving +
+                        feedback?.rating?.experience) / 4
                     ).toFixed(1)}/10
                   </span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { 
-                      name: "Technical Skills", 
+                    {
+                      name: "Technical Skills",
                       value: feedback?.rating?.technicalSkills * 10 || 0,
                       icon: "💻"
                     },
-                    { 
-                      name: "Communication", 
+                    {
+                      name: "Communication",
                       value: feedback?.rating?.communication * 10 || 0,
                       icon: "🗣️"
                     },
-                    { 
-                      name: "Problem Solving", 
+                    {
+                      name: "Problem Solving",
                       value: feedback?.rating?.problemSolving * 10 || 0,
                       icon: "🧩"
                     },
-                    { 
-                      name: "Experience", 
+                    {
+                      name: "Experience",
                       value: feedback?.rating?.experience * 10 || 0,
                       icon: "📚"
                     }
@@ -111,7 +110,7 @@ function CandidateFeedbackDialog({ candidate }) {
                           {skill.name}
                         </h3>
                         <span className="text-xs font-bold px-2 py-1 rounded-full bg-purple-50 text-purple-600">
-                          {skill.value/10}/10
+                          {skill.value / 10}/10
                         </span>
                       </div>
                       <Progress value={skill.value} className="h-2" />
@@ -132,16 +131,14 @@ function CandidateFeedbackDialog({ candidate }) {
               </div>
 
               {/* Recommendation */}
-              <div className={`mt-6 p-4 rounded-lg border ${
-                isRecommended 
-                  ? 'bg-green-50 border-green-100' 
-                  : 'bg-red-50 border-red-100'
-              }`}>
+              <div className={`mt-6 p-4 rounded-lg border ${isRecommended
+                ? 'bg-green-50 border-green-100'
+                : 'bg-red-50 border-red-100'
+                }`}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className={`font-bold flex items-center gap-2 ${
-                      isRecommended ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <h2 className={`font-bold flex items-center gap-2 ${isRecommended ? 'text-green-600' : 'text-red-600'
+                      }`}>
                       {isRecommended ? (
                         <CheckCircle2 className="w-5 h-5 text-green-500" />
                       ) : (
@@ -149,17 +146,15 @@ function CandidateFeedbackDialog({ candidate }) {
                       )}
                       Recommendation
                     </h2>
-                    <p className={`text-sm mt-1 ${
-                      isRecommended ? 'text-green-700' : 'text-red-700'
-                    }`}>
+                    <p className={`text-sm mt-1 ${isRecommended ? 'text-green-700' : 'text-red-700'
+                      }`}>
                       {feedback?.RecommendationMsg}
                     </p>
                   </div>
-                  <Button className={`flex items-center gap-2 ${
-                    isRecommended 
-                      ? 'bg-green-600 hover:bg-green-700' 
-                      : 'bg-red-600 hover:bg-red-700'
-                  }`}>
+                  <Button className={`flex items-center gap-2 ${isRecommended
+                    ? 'bg-green-600 hover:bg-green-700'
+                    : 'bg-red-600 hover:bg-red-700'
+                    }`}>
                     <MessageSquare className="w-4 h-4" />
                     Send Message
                   </Button>

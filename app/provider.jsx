@@ -1,6 +1,4 @@
 
-
-
 'use client';
 
 import { UserDetailContext } from '@/context/UserDetailContext';

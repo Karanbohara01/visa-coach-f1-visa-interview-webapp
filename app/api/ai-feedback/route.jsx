@@ -22,6 +22,8 @@ export async function POST(req) {
         const completion = await openai.chat.completions.create({
             model: "openai/gpt-4o-mini",
             messages: [{ role: "user", content: FINAL_PROMPT }],
+            max_tokens: 2048 // Or another reasonable number
+
         });
 
         // Extract the response message

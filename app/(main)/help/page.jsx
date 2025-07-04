@@ -10,44 +10,44 @@ import { RiCustomerService2Fill } from 'react-icons/ri';
 
 // --- Data ---
 const faqs = [
-    { 
-        question: "Is Visa Coach AI free?", 
+    {
+        question: "Is Visa Coach AI free?",
         answer: "✅ Yes! Our core features are completely free forever. We offer premium upgrades for advanced analytics, personalized coaching sessions, and document review services.",
         stars: 5
     },
-    { 
-        question: "How accurate is the AI feedback?", 
+    {
+        question: "How accurate is the AI feedback?",
         answer: "Our AI system is trained on over 50,000 successful F1 visa interviews and continuously updated with the latest consular trends. It provides feedback with 94.7% accuracy based on user-reported outcomes.",
         stars: 4
     },
-    { 
-        question: "Can I practice specific question types?", 
+    {
+        question: "Can I practice specific question types?",
         answer: "Absolutely! Our question bank lets you focus on specific categories: academic background, financial proof, post-graduation plans, or ties to home country. Create custom practice sessions targeting your weak areas.",
         stars: 5
     }
 ];
 
 const features = [
-    { 
-        name: "AI Mock Interview", 
+    {
+        name: "AI Mock Interview",
         description: "Experience a hyper-realistic simulation with our AI consular officer that adapts to your responses in real-time.",
         icon: <PiStudentBold className="w-8 h-8" />,
         color: "bg-gradient-to-br from-purple-400 to-purple-600"
     },
-    { 
-        name: "Performance Analytics", 
+    {
+        name: "Performance Analytics",
         description: "Detailed breakdowns of your fluency, confidence, content accuracy, and body language with improvement timelines.",
         icon: <IoDocumentTextOutline className="w-8 h-8" />,
         color: "bg-gradient-to-br from-purple-300 to-purple-500"
     },
-    { 
-        name: "Document Coach", 
+    {
+        name: "Document Coach",
         description: "Smart checklist that evaluates your documents and suggests improvements before submission.",
         icon: <IoSpeedometerOutline className="w-8 h-8" />,
         color: "bg-gradient-to-br from-purple-200 to-purple-400"
     },
-    { 
-        name: "Visa Success Predictor", 
+    {
+        name: "Visa Success Predictor",
         description: "Our proprietary algorithm calculates your approval probability based on practice performance.",
         icon: <FaLightbulb className="w-8 h-8" />,
         color: "bg-gradient-to-br from-purple-500 to-purple-700"
@@ -74,8 +74,8 @@ const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { 
-            staggerChildren: 0.1, 
+        transition: {
+            staggerChildren: 0.1,
             delayChildren: 0.3,
             type: "spring",
             stiffness: 100
@@ -85,14 +85,14 @@ const containerVariants = {
 
 const itemVariants = {
     hidden: { y: 40, opacity: 0 },
-    visible: { 
-        y: 0, 
-        opacity: 1, 
-        transition: { 
-            type: 'spring', 
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: 'spring',
             stiffness: 100,
             damping: 10
-        } 
+        }
     }
 };
 
@@ -123,7 +123,7 @@ export default function HelpPage() {
 
     const renderStars = (count) => {
         return Array(5).fill(0).map((_, i) => (
-            <motion.span 
+            <motion.span
                 key={i}
                 variants={starVariants}
                 whileHover="hover"
@@ -186,7 +186,7 @@ export default function HelpPage() {
                         </div>
                     </motion.div>
 
-                    <motion.h1 
+                    <motion.h1
                         className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -194,8 +194,8 @@ export default function HelpPage() {
                     >
                         <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">Visa Coach AI</span> Help Center
                     </motion.h1>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="mt-4 text-xl text-purple-700 max-w-2xl mx-auto"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -203,8 +203,8 @@ export default function HelpPage() {
                     >
                         Your comprehensive resource for F1 visa interview mastery
                     </motion.p>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="mt-8 max-w-md mx-auto relative"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -241,20 +241,20 @@ export default function HelpPage() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    <motion.h2 
+                    <motion.h2
                         className="text-4xl font-bold text-center mb-6"
                         variants={itemVariants}
                     >
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Premium</span> Features
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800"></span> Features
                     </motion.h2>
-                    
-                    <motion.p 
+
+                    <motion.p
                         className="text-center text-purple-700 max-w-2xl mx-auto mb-12"
                         variants={itemVariants}
                     >
                         Designed specifically for F1 visa applicants by immigration experts
                     </motion.p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature, index) => (
                             <motion.div
@@ -283,7 +283,7 @@ export default function HelpPage() {
                 </motion.section>
 
                 {/* --- Testimonials Section --- */}
-                <motion.section 
+                <motion.section
                     className="mb-32"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -296,7 +296,7 @@ export default function HelpPage() {
                             <h2 className="text-3xl font-bold text-center mb-12">
                                 Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Thousands</span> of Students
                             </h2>
-                            
+
                             <div className="max-w-3xl mx-auto h-48 relative">
                                 <AnimatePresence mode="wait">
                                     <motion.div
@@ -316,7 +316,7 @@ export default function HelpPage() {
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
-                            
+
                             <div className="flex justify-center gap-2 mt-8">
                                 {testimonials.map((_, index) => (
                                     <button
@@ -346,23 +346,23 @@ export default function HelpPage() {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <motion.h2 
+                        <motion.h2
                             className="text-4xl font-bold mb-4"
                             variants={itemVariants}
                         >
                             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Questions</span>
                         </motion.h2>
-                        <motion.p 
+                        <motion.p
                             className="text-purple-700 max-w-2xl mx-auto"
                             variants={itemVariants}
                         >
                             Everything you need to know about Visa Coach AI
                         </motion.p>
                     </motion.div>
-                    
+
                     <div className="max-w-3xl mx-auto space-y-4">
                         {filteredFaqs.map((faq, index) => (
-                            <motion.div 
+                            <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -380,7 +380,7 @@ export default function HelpPage() {
                                             {renderStars(faq.stars)}
                                         </div>
                                     </div>
-                                    <motion.div 
+                                    <motion.div
                                         animate={{ rotate: expandedFaq === index ? 180 : 0 }}
                                         className="text-purple-400"
                                     >
@@ -423,43 +423,43 @@ export default function HelpPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                   <div className="relative rounded-2xl overflow-hidden bg-white border border-purple-100 p-12 shadow-sm">
-  <div className="absolute inset-0 bg-[url('/grid-pattern-light.svg')] opacity-5" />
-  <div className="relative z-10">
-    <motion.div
-      whileHover={{ rotate: 15 }}
-      className="inline-block mb-6"
-    >
-      <RiCustomerService2Fill className="text-purple-600 text-5xl mx-auto" />
-    </motion.div>
-    <h2 className="text-3xl font-bold text-purple-800 mb-4">Still Need Help?</h2>
-    <p className="text-purple-600 max-w-xl mx-auto mb-8">
-      Our dedicated support team is available 24/7 to ensure your visa preparation journey is smooth and successful.
-    </p>
-    <div className="flex flex-col sm:flex-row justify-center gap-4">
-      <motion.button
-        className="bg-purple-600 text-white font-bold px-8 py-3 rounded-full shadow-lg flex items-center gap-2 mx-auto"
-        whileHover={{ 
-          scale: 1.05,
-          boxShadow: "0px 0px 20px rgba(139, 92, 246, 0.5)"
-        }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <span>Contact Support</span>
-      </motion.button>
-      <motion.button
-        className="bg-white border-2 border-purple-600 text-purple-600 font-bold px-8 py-3 rounded-full flex items-center gap-2 mx-auto"
-        whileHover={{ 
-          scale: 1.05,
-          backgroundColor: "rgba(139, 92, 246, 0.05)"
-        }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <span>Schedule a Call</span>
-      </motion.button>
-    </div>
-  </div>
-</div>
+                    <div className="relative rounded-2xl overflow-hidden bg-white border border-purple-100 p-12 shadow-sm">
+                        <div className="absolute inset-0 bg-[url('/grid-pattern-light.svg')] opacity-5" />
+                        <div className="relative z-10">
+                            <motion.div
+                                whileHover={{ rotate: 15 }}
+                                className="inline-block mb-6"
+                            >
+                                <RiCustomerService2Fill className="text-purple-600 text-5xl mx-auto" />
+                            </motion.div>
+                            <h2 className="text-3xl font-bold text-purple-800 mb-4">Still Need Help?</h2>
+                            <p className="text-purple-600 max-w-xl mx-auto mb-8">
+                                Our dedicated support team is available 24/7 to ensure your visa preparation journey is smooth and successful.
+                            </p>
+                            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                                <motion.button
+                                    className="bg-purple-600 text-white font-bold px-8 py-3 rounded-full shadow-lg flex items-center gap-2 mx-auto"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        boxShadow: "0px 0px 20px rgba(139, 92, 246, 0.5)"
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span>Contact Support</span>
+                                </motion.button>
+                                <motion.button
+                                    className="bg-white border-2 border-purple-600 text-purple-600 font-bold px-8 py-3 rounded-full flex items-center gap-2 mx-auto"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        backgroundColor: "rgba(139, 92, 246, 0.05)"
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <span>Schedule a Call</span>
+                                </motion.button>
+                            </div>
+                        </div>
+                    </div>
                 </motion.section>
             </main>
         </div>

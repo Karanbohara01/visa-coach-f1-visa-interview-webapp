@@ -1,7 +1,7 @@
 
 'use client'
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Copy, Send } from 'lucide-react';
+import { ArrowRight, Copy, Send, Video } from 'lucide-react';
 import moment from 'moment';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -15,7 +15,7 @@ function InterviewCard({ interview, viewDetails = false }) {
   };
 
   const onSend = () => {
-    window.location.href = 
+    window.location.href =
       `mailto:karanbohara216@gmail.com?subject=VisaCoach F1 Visa Interview Link&body=Interview Link: ${url}`;
   };
 
@@ -64,20 +64,20 @@ function InterviewCard({ interview, viewDetails = false }) {
                 onClick={onSend}
                 className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-md text-sm font-semibold hover:bg-purple-700 transition-colors w-full sm:w-auto"
               >
-                <Send className="h-4 w-4" />
-                Send
+                <Video className="h-4 w-4" />
+                Join
               </Button>
             </>
           ) : (
-           <Link href={'/scheduled-interview/' +interview?.interview_id + "/details"}>
-            <Button
-              className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-md text-sm font-semibold hover:from-purple-600 hover:to-purple-700 transition-all w-full sm:w-auto"
-            >
-              View Details
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-           
-           </Link>
+            <Link href={'/scheduled-interview/' + interview?.interview_id + "/details"}>
+              <Button
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-md text-sm font-semibold hover:from-purple-600 hover:to-purple-700 transition-all w-full sm:w-auto"
+              >
+                View Details
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+
+            </Link>
           )}
         </div>
       </div>
