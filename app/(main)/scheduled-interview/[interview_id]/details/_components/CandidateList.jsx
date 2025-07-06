@@ -7,11 +7,11 @@ function CandidateList({ candidateList }) {
   return (
     <div className="p-6 space-y-6 mt-4 bg-gray-50 rounded-lg border border-gray-200">
       <h2 className="font-bold text-xl text-gray-800">
-        Candidates ({candidateList?.length || 0})
+        Attempts ({candidateList?.length || 0})
       </h2>
       {candidateList?.map((candidate, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className="flex flex-col md:flex-row items-center md:justify-between gap-4 p-4 bg-white rounded-lg   border border-gray-200"
         >
           <div className="flex items-center gap-4">
@@ -29,9 +29,9 @@ function CandidateList({ candidateList }) {
           </div>
           <div className="flex items-center gap-4">
             <p className="text-green-600">6/10</p>
-          <CandidateFeedbackDialog candidate = {candidate}/>
+            <CandidateFeedbackDialog candidate={candidate} />
           </div>
-          
+
         </div>
       ))}
     </div>
