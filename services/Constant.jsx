@@ -5,7 +5,7 @@ export const SidebarOptions = [
     {
         name: "Dashboard",
         icon: LayoutDashboard,
-        path: '/dashboards'
+        path: '/dashboard'
     },
     {
         name: "Scheduled Interview",
