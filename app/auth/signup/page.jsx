@@ -171,7 +171,7 @@ export default function SignupPage() {
               />
               <button
                 type="button"
-                className="absolute right-3 top-7 text-gray-500"
+                className="absolute right-3 top-7 text-gray-600"
                 onClick={() => setShowConfirmPassword((prev) => !prev)}
               >
                 {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
