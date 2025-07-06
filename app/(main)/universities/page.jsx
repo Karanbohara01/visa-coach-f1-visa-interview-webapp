@@ -545,19 +545,7 @@ export default function UniversityChatBot() {
                     })}
                 </div>
 
-                {/* Progress
-                <div>
-                    <div className="flex justify-between text-sm text-gray-600 mb-1">
-                        <span>Session Progress</span>
-                        <span>{sessionProgress}%</span>
-                    </div>
-                    <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-gradient-to-r from-purple-500 to-purple-600 transition-all duration-300"
-                            style={{ width: `${sessionProgress}%` }}
-                        />
-                    </div>
-                </div> */}
+               
 
                 {/* Input */}
                 <div className="flex gap-2">

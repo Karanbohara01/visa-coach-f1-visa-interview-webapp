@@ -20,9 +20,10 @@ export async function POST(req) {
 
         // Generate feedback from OpenAI
         const completion = await openai.chat.completions.create({
-            model: "openai/gpt-4o-mini",
+            model: "meta-llama/llama-3.3-70b-instruct",
+
             messages: [{ role: "user", content: FINAL_PROMPT }],
-            max_tokens: 2048 // Or another reasonable number
+            max_tokens: 1020 // Or another reasonable number
 
         });
 

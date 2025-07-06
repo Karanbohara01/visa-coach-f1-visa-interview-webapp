@@ -27,7 +27,7 @@ export async function POST(req) {
             messages: [
                 { role: "user", content: FINAL_PROMPT }
             ],
-            max_tokens: 2048 // Or another reasonable number
+            max_tokens: 1048 // Or another reasonable number
 
 
         })

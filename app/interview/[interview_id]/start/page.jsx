@@ -162,15 +162,32 @@ function StartInterview() {
             console.log("Conversation being sent:", conversation);
 
             const response = await axios.post("/api/ai-feedback", { conversation });
-            console.log("Feedback API response:", response.data);
-
             const rawFeedback = response.data.feedback;
-            if (!rawFeedback) {
-                throw new Error("No feedback found in API response");
-            }
-            const content = rawFeedback.replace("```json", "").replace("```", "");
-            const feedback = JSON.parse(content);
+            if (!rawFeedback) throw new Error("No feedback found in API response");
 
+            // ✅ Extract JSON block from messy response using regex
+            const match = rawFeedback.match(/```json\s*([\s\S]*?)\s*```/);
+            let content = match ? match[1].trim() : null;
+
+            if (!content) {
+                console.warn("⚠️ No valid JSON block found. Raw fallback:");
+                console.warn(rawFeedback);
+                toast.error("AI response was not in valid JSON format.");
+                setLoading(false);
+                return;
+            }
+
+            let feedback;
+            try {
+                feedback = JSON.parse(content);
+            } catch (err) {
+                console.error("❌ JSON parse failed. Extracted content:", content);
+                toast.error("Failed to parse AI feedback. Please try again.");
+                setLoading(false);
+                return;
+            }
+
+            // ✅ Insert to Supabase
             const { data, error } = await supabase
                 .from("interview-feedback")
                 .insert([
@@ -179,7 +196,7 @@ function StartInterview() {
                         userEmail: interviewInfo?.userEmail,
                         interview_id: interview_id,
                         feedback,
-                        recommended: false,
+                        recommended: feedback?.Recommendation ?? false,
                     },
                 ])
                 .select();
@@ -189,14 +206,13 @@ function StartInterview() {
                 throw error;
             }
 
-            console.log("Feedback saved in Supabase:", data);
-
-            // Await router replacement
-            await router.replace('/interview/' + interview_id + '/completed');
-            setLoading(false);
+            console.log("✅ Feedback saved in Supabase:", data);
+            await router.replace(`/interview/${interview_id}/completed`);
         } catch (error) {
             console.error("Error in generateFeedback:", error);
-            setLoading(false); // Ensure loading is false even on error
+            toast.error("Something went wrong during feedback processing.");
+        } finally {
+            setLoading(false);
         }
     };
 
