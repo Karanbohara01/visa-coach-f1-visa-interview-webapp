@@ -34,7 +34,7 @@ export default function SignupPage() {
 
     // Validation
     if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match')
+      setError('Password do not match')
       setLoading(false)
       return
     }
