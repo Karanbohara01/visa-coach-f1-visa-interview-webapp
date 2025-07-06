@@ -161,9 +161,7 @@ const InterviewComplete = ({ jobPosition = "Your Interview", userName = "Candida
                             <p>
                                 Our AI is now analyzing your responses to provide a detailed performance report.
                             </p>
-                            {/* <p>
-                                The hiring team will review your results and will be in touch regarding the next steps within the next **2-3 business days**.
-                            </p> */}
+
                         </CardContent>
                     </Card>
 
@@ -177,8 +175,7 @@ const InterviewComplete = ({ jobPosition = "Your Interview", userName = "Candida
                         </CardHeader>
                         <CardContent className="space-y-2 text-gray-600">
                             <div className="flex justify-between">
-                                {/* <span className="font-medium">Position:</span>
-                                <span>{jobPosition}</span> */}
+
                             </div>
                             <div className="flex justify-between">
                                 <span className="font-medium">Date Completed:</span>
@@ -195,7 +192,7 @@ const InterviewComplete = ({ jobPosition = "Your Interview", userName = "Candida
                 {/* Action Buttons */}
                 <motion.div
                     variants={itemVariants}
-                    className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
+                    className="mt-10 flex flex-col sm:flex-row justify-center gap-5"
                 >
                     <Link href={'/dashboard'}>
                         <Button size="lg" className="h-12 text-base" onClick={() => router.push('/dashboard')}>

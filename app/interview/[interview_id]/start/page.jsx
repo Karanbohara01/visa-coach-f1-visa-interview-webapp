@@ -88,7 +88,7 @@ function StartInterview() {
     const startCall = async () => {
         const questions = interviewInfo?.interviewdata?.questionList || [];
         if (!questions.length) {
-            console.error("No questions available for the interview.");
+            console.error("No question available for the interview.");
             return;
         }
 
