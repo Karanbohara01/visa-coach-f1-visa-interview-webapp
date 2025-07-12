@@ -22,12 +22,12 @@ export async function POST(req) {
         })
         const completion = await openai.chat.completions.create({
             // model: "google/gemini-flash-1.5",
-            model: "openai/gpt-4o-mini",
+            model: "qwen/qwen3-30b-a3b:free",
 
             messages: [
                 { role: "user", content: FINAL_PROMPT }
             ],
-            max_tokens: 1048 // Or another reasonable number
+            max_tokens: 2048 // Or another reasonable number
 
 
         })

@@ -14,10 +14,7 @@ function InterviewCard({ interview, viewDetails = false }) {
     toast('Copied to clipboard');
   };
 
-  const onSend = () => {
-    window.location.href =
-      `mailto:karanbohara216@gmail.com?subject=VisaCoach F1 Visa Interview Link&body=Interview Link: ${url}`;
-  };
+
 
   return (
     <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm   transition-all duration-300 w-full max-w-2xl mx-auto">
@@ -30,7 +27,7 @@ function InterviewCard({ interview, viewDetails = false }) {
           <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-2 py-1 rounded-md">
             {moment(interview?.created_at).format("MMM Do, YYYY")}
           </span>
-        </div>
+        </div>  
 
         {/* Row 2: Duration and Number of Candidates */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-sm text-gray-700">
@@ -61,7 +58,7 @@ function InterviewCard({ interview, viewDetails = false }) {
                 Copy Link
               </Button>
               <Button
-                onClick={onSend}
+                onClick={() => window.location.href = `/interview/${interview?.interview_id}`}
                 className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-md text-sm font-semibold hover:bg-purple-700 transition-colors w-full sm:w-auto"
               >
                 <Video className="h-4 w-4" />

@@ -47,7 +47,7 @@ export async function POST(req) {
                 'X-Title': 'Visa Interview Chat',
             },
             body: JSON.stringify({
-                model: 'meta-llama/llama-3.3-70b-instruct',
+                model: 'qwen/qwen3-30b-a3b:free',
                 messages: [
                     {
                         role: 'system',
